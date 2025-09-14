@@ -1,0 +1,185 @@
+.dish-comp-main-container{
+    padding: 0px;
+    margin: 0px;
+}
+
+.dishname-and-type{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ingredient-button{
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    gap: 5px;
+    color:  #FF941A;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.ingredient-icon-img{
+    width: 25px;
+    height: 25px;
+}
+
+.dish-card-category-names{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.up-down-button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.unordered-dish-cards-main-container, .unordered-dish-cards-container{
+    list-style-type: none;
+    padding: 15px;
+    
+}
+
+.unordered-dish-cards-main-container{
+    padding-bottom: 150px;
+}
+
+.dish-cards-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.horizontal-line{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.img-with-add-remove-button{
+    position: relative;
+    display: inline-block;
+}
+
+.dish-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.add-remove-button{
+    position: absolute;
+    bottom: -4px;
+    right: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    height: 35px;
+    background-color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.remove-button{
+    color:  #FF941A;
+}
+
+.add-button{
+    color: #73AE78;
+}
+
+.total-seleceted-section{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #FFFAF4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px;
+}
+
+.total-selected-text{
+    font-size: 20px;
+    font-weight: bold;
+    color: #1C1C1C;
+}
+
+.continue-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.continue-button{
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 50px;
+    background-color: #1C1C1C;
+    color: #FFFAF4;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+
+.selected-text-and-right-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.right-icon{
+    width: 25px;
+    height: 25px;
+}
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.dish-detail-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 360px;
+  max-width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.detail-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.close-btn {
+  margin-top: 16px;
+  padding: 8px 14px;
+  border: none;
+  background: #ff5252;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
