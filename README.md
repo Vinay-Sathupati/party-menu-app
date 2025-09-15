@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# 🍴 Tech Assignment - Party Menu Selection App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application where a user can browse a categorized menu of dishes, filter them based on different criteria, and select their desired items for a party.
 
-## Available Scripts
+## 🛠 Tools & Libraries Used
 
-In the project directory, you can run:
+### 🖥️ Frontend
 
-### `npm start`
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![CSS](https://img.shields.io/badge/Styling-CSS3-blueviolet)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React.js (with functional components and React Hooks)
+- CSS (Responsive styling)
+- React Router for navigation
+- React Icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 💽 Database
 
-### `npm test`
+- Used mock JSON data for dish and ingredient listings.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Sample Data
 
-### `npm run build`
+```json
+{
+    "categoryId": 1,
+    "mealType": "STARTER",
+    "type": "VEG",
+    "description": "Crispy potato patties served with chutneys.",
+    "image": "https://res.cloudinary.com/dxcwdueld/image/upload/v1757766893/image_191_kryog8.jpg",
+    "category": {
+      "id": 1,
+      "name": "Indian",
+      "image": "https://res.cloudinary.com/dxcwdueld/image/upload/v1757879774/image_207_edwnny.jpg",
+      "isRecommendedForMealSuggestion": true
+    },
+    "dishType": "STARTER",
+    "id": 101,
+    "name": "Aloo Tikki",
+    "ingredients": [
+      { "name": "Potato", "quantity": "2 large" },
+      { "name": "Chili", "quantity": "1 tsp" },
+      { "name": "Coriander", "quantity": "1 tbsp" }
+    ]
+  }
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📌 **Note:**  
+> - Dish images are stored as **Cloudinary-hosted URLs**.  
+> - For this project, a **single image** is reused across all dish types as a placeholder.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 📂 Project Structure
+```
+party-menu-app/
+|
+├── src/
+│ ├── components/
+│ │ ├── DishList/ # Dish listing component (grouped, add/remove, ingredient button)
+│ │ ├── Filters/ # Search bar, tabs for categories, veg/non-veg filters
+│ │ ├── Home/ # Home screen (contains Filters + DishList together)
+│ │ ├── Ingredients/ # Ingredient details screen
+│ │
+│ ├── data/ # Mock data (dishes, categories, ingredients)
+│ │ └── data.js
+│ │
+│ ├── App.js # Main entry component, sets up routes (Home & Ingredients)
+│ ├── App.css # Global styles
+```
+## Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Home Page
+- 🏠 Home Page (Grouped dishes with filters and search)
+![Home Page](./screenshots/home_page.PNG)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Ingredients Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- (Detailed ingredient list for each dish)
+![Ingredients Page](./screenshots/ingredients_list_page.PNG)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Features
 
-## Learn More
+### 1. Menu Categories
+- Four meal types are displayed as selectable tabs:
+  - Starter  
+  - Main Course  
+  - Dessert  
+  - Sides  
+- Selecting a tab shows only the dishes related to that category.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Dish List
+- Dishes are **grouped by their category** (e.g., North Indian, Chinese, Continental).  
+- Each group can be expanded or collapsed.  
+- Each dish card displays:
+  - Dish Name  
+  - Short Description  
+  - Image  
+  - Button to **Add / Remove** the dish  
+  - An **Ingredient** button to view detailed ingredients.  
+- Added dishes are visually marked and included in the selected count.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Search Functionality
+- A search bar is available at the top.  
+- Filters dishes by **dish name** (case-insensitive).  
+- Search applies **only within the selected meal category**.
 
-### Code Splitting
+### 4. Veg / Non-Veg Filter
+- Two toggle filters: **Veg** and **Non-Veg**.  
+- Filters dishes based on the selected type.  
+- Filtered results update the dish list immediately.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 5. Dish Selection Summary
+- Shows the **count of selected dishes** in each category tab.  
+- Displays the **total selected dish count** at the bottom of the screen.  
+- Includes a **Continue** button (further navigation is not provided after that).  
 
-### Analyzing the Bundle Size
+### 6. Ingredient Detail Screen
+- Clicking the **Ingredient** button on a dish navigates to a new screen.  
+- Displays:
+  - Dish Name and Short Description  
+  - Ingredient List with Quantities (mock data) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⚡ Installation & Running
 
-### Making a Progressive Web App
+1. ### Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```
+    git clone https://github.com/Vinay-Sathupati/party-menu-app.git
+    ```
+2. ### Navigate into the project
 
-### Advanced Configuration
+    ```
+    cd party-menu-app
+    ```
+3. ### Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    ```
+    npm install
+    ```
+4. ### Start the development server
 
-### Deployment
+    ```
+    npm start
+    ```
+- The app will be available at: http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## ✨ Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add cart and checkout flow
+
+- Backend integration for live data
+
+- User authentication and profile management
+
+- Order history page
+
+
+## 🎁 Contribution
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
