@@ -71,12 +71,12 @@ party-menu-app/
 
 ### Home Page
 - 🏠 Home Page (Grouped dishes with filters and search)
-![Home Page](./screenshots/home_page.PNG)
+![Home Page](./screenshots/home_page.png)
 
 ### Ingredients Page
 
 - (Detailed ingredient list for each dish)
-![Ingredients Page](./screenshots/ingredients_list_page.PNG)
+![Ingredients Page](./screenshots/ingredients_list_page.png)
 
 ## 🚀 Features
 
